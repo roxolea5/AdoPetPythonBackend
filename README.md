@@ -34,3 +34,23 @@ Create Django app
 ```
 python manage.py startapp app_name
 ```
+### Map project urls to app urls
+Create file urls.py inside app folder and modify project urls.py file
+```
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('', include("app.urls")), 
+    path('admin/', admin.site.urls),
+]
+```
+Mofify urls.py on app folder to access corresponding views
+```
+ from django.urls import path
+  from . import views
+
+  urlpatterns = [
+ path('', views.index, name="index"),
+  ]
+```
