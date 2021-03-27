@@ -1,0 +1,233 @@
+body {
+  background-color: #fffbf7;
+}
+
+.navbar {
+  background-color: #effcf9;
+}
+.navbar img {
+  width: 142px;
+  height: 37px;
+  fill: none;
+}
+.navbar .dropdown-menu {
+  background-color: #cee2c6;
+}
+.navbar .nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+main {
+  height: 100%;
+  padding-top: 80px;
+  text-align: center;
+}
+main .jumbotron-fluid {
+  padding: 0;
+}
+main .parallax {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+main h1 {
+  color: #f1b24a;
+  font-family: "Alegreya", sans-serif;
+  font-size: 60px;
+  margin-bottom: 24px;
+}
+main h4 {
+  color: #effcf9;
+  text-shadow: #f1b24a;
+}
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
+.aboutus .heading {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.aboutus .heading h2 {
+  font-weight: 600;
+  font-size: 40px;
+  color: #164a41;
+  margin: 0;
+  padding: 5px;
+}
+.aboutus mark {
+  color: #164a41;
+}
+.aboutus .divider {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-top: 3px solid #f1b24a;
+}
+.aboutus .card {
+  margin: 10px;
+  width: 250px;
+}
+.aboutus .card .card-img-top {
+  width: 250px;
+  height: 250px;
+}
+.aboutus .card .btn {
+  color: #4d774e;
+  font-weight: bold;
+}
+
+.landinginfo .divider {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-top: 2px solid #f1b24a;
+}
+.landinginfo .heading {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.landinginfo .heading h2 {
+  font-weight: 600;
+  font-size: 40px;
+  color: #164a41;
+  margin: 0;
+  padding: 5px;
+}
+.landinginfo h5 {
+  font-weight: bold;
+  color: #164a41;
+  margin: 0;
+  padding: 5px;
+}
+.landinginfo mark {
+  color: #164a41;
+}
+.landinginfo ul {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  list-style-type: none;
+  padding-left: 20px;
+}
+.landinginfo div {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+.landinginfo .list {
+  list-style-type: initial;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+.landinginfo img {
+  width: 250px;
+  height: 250px;
+}
+
+.footer {
+  background: #4d774e;
+  margin-top: 100px;
+  position: relative;
+}
+.footer .container {
+  padding: 60px 0 20px;
+}
+.footer ul {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  text-align: center;
+  list-style-type: none;
+  padding-left: 0;
+}
+.footer ul li {
+  text-align: center;
+  display: inline-block;
+  background: #5b8f71;
+  color: #fffbf7;
+  line-height: 45px;
+  margin: 0 4px;
+  width: 45px !important;
+  height: 45px !important;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.footer ul li a {
+  color: #fffbf7;
+  width: 42px !important;
+  height: 42px !important;
+}
+.footer ul li a i {
+  line-height: 45px;
+  color: #fffbf7;
+}
+.footer ul li:hover {
+  background: #164a41;
+}
+.footer ul li:hover a {
+  color: #fffbf7;
+}
+.footer p {
+  color: #fffbf7;
+  font-size: 0.9em;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.footer a, .footer a:hover {
+  color: #fff;
+}
+
+.pets-and-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f1b24a;
+  padding: 2% 3%;
+}
+.pets-and-info .top-pets {
+  background-color: #cee2c6;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.pets-and-info .top-pets .top-pets-content {
+  margin-bottom: 1rem;
+  margin-top: 0;
+  padding: 30px 20px 40px 40px;
+  flex: 2;
+}
+.pets-and-info .top-pets .top-pets-content figure {
+  text-align: center;
+}
+.pets-and-info .top-pets .top-pets-content img {
+  width: 300px;
+  height: 300px;
+}
+.pets-and-info .top-pets .top-pets-content h3 {
+  font-size: 24px;
+  color: #343434;
+  font-weight: 400;
+}
+.pets-and-info .top-pets .top-pets-content p {
+  font-size: 16px;
+  color: #7e7e7e;
+  font-weight: 400;
+}
+.pets-and-info .top-pets .top-pets-content a {
+  font-size: 16px;
+  color: #67b54b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=adoPet.css.map */
