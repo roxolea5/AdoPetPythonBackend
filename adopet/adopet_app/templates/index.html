@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
     <!-- Welcome to website -->
     <main>
       <div class="jumbotron jumbotron-fluid" id="banner">
-       <div class="parallax text-center text-white" style="background-image:url('../static/images/pet-main.jpg');">
+       <div class="parallax text-center text-white" style="background-image:url('{% static 'images/pet-main.jpg' %}');">
           
             <div class="container text-center" style="height:580px;padding-top:170px;">
               <h1 class="card-title pt-3 mb-5 font-bold"><strong>BIENVENID@S</strong></h1>
@@ -32,8 +34,8 @@
           <div class="row justify-content-center">
             <div class="col-md-3">
               <div class="card text-center">
-                <a href="dogs.html">
-                  <img class="card-img-top" src="../static/images/main/dog.jpg" alt="To dogs section">
+                <a href="{% url 'adop_dogs' %}">
+                  <img class="card-img-top" src="{% static 'images/main/dog.jpg' %}" alt="To dogs section">
                 </a>                
                 <div class="card-block">
                   <h4 class="card-title">Perros</h4>
@@ -43,8 +45,8 @@
             </div>
             <div class="col-md-3">
               <div class="card text-center">
-                <a href="#">
-                  <img class="card-img-top" src="../static/images/main/cat.jpg" alt="To cats section">
+                <a href="{% url 'adop_cats' %}">
+                  <img class="card-img-top" src="{% static 'images/main/cat.jpg' %}" alt="To cats section">
                 </a>
                 <div class="card-block">
                   <h4 class="card-title">Gatos</h4>
@@ -54,8 +56,8 @@
             </div>
             <div class="col-md-3">
               <div class="card text-center">
-                <a href="#">
-                  <img class="card-img-top" src="../static/images/main/other.jpg" alt="To others section">
+                <a href="{% url 'adop_others' %}">
+                  <img class="card-img-top" src="{% static 'images/main/other.jpg' %}" alt="To others section">
                 </a>
                 <div class="card-block">
                   <h4 class="card-title">Otros</h4>

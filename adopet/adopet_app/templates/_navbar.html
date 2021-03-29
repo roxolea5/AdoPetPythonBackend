@@ -1,7 +1,9 @@
+{% load static %}
+
 <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="index.html">  
+    <a class="navbar-brand" href="{% url 'index' %}">  
       <img
-        src="../static/images/adoPet2.png"
+        src="{% static 'images/adoPet2.png' %}"
         alt="AdoPetLogo"
       />
     </a>
@@ -30,14 +32,14 @@
               >Mascotas
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="dogs">Perros</a>
-              <a class="dropdown-item" href="cats">Gatos</a>
+              <a class="dropdown-item" href="{% url 'adop_dogs' %}">Perros</a>
+              <a class="dropdown-item" href="{% url 'adop_cats' %}">Gatos</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="others">Otras</a>
+              <a class="dropdown-item" href="{% url 'adop_others' %}">Otras</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="adoptionInfo">¿Cómo adopto? </a>
+          <a class="nav-link" href="{% url 'adoption_info' %}">¿Cómo adopto? </a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" 
@@ -49,9 +51,9 @@
               >Consejos y Cuidados
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="dogtraining">Entrenamiento básico en perros</a>
-            <a class="dropdown-item" href="cattraining">Entrenamiento básico en gatos</a>
-            <a class="dropdown-item" href="basiccare">Cuidados básicos para mascotas</a>
+            <a class="dropdown-item" href="{% url 'dog_training' %}">Entrenamiento básico en perros</a>
+            <a class="dropdown-item" href="{% url 'cat_training' %}">Entrenamiento básico en gatos</a>
+            <a class="dropdown-item" href="{% url 'basic_care' %}">Cuidados básicos para mascotas</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -65,8 +67,8 @@
               >Nosotros y más
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="aboutus">¿Quiénes somos?</a>
-            <a class="dropdown-item" href="directory">Directorio de entrenadores</a>
+            <a class="dropdown-item" href="{% url 'about_us' %}">¿Quiénes somos?</a>
+            <a class="dropdown-item" href="{% url 'directory' %}">Directorio de entrenadores</a>
           </div>
         </li>
       </ul>

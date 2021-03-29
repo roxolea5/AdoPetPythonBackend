@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 
     <!-- Welcome to website -->
     <main>
       <div class="jumbotron jumbotron-fluid" id="banner">
-       <div class="parallax text-center text-white" style="background-image:url('../static/images/train/dogtraining.jpg');">
+       <div class="parallax text-center text-white" style="background-image:url('{% static 'images/train/dogtraining.jpg' %}');">
           
             <div class="container text-center" style="height:580px;padding-top:170px;">
               <h1 class="card-title pt-3 mb-5 font-bold"><strong>ENTRENAMIENTO</strong></h1>
@@ -37,7 +39,7 @@
 
               <p>Empieza esparciendo los periódicos sobre una gran superficie. Poco a poco reduce la superficie cubierta de papeles hasta que baste con poner varias hojas en el lugar de su elección. Ríñelo cuando cometa un error, y después llévalo a su lugar elegido. En caso de "accidente" no se le debe pegar. Limpia el lugar que ensució con vinagre o amoníaco diluido con agua tibia para eliminar cualquier olor que pudiera atraerlo otra vez al mismo lugar.</p>
 
-              <img src="../static/images/train/dogclean.jpg" alt="dog-clean">
+              <img src="{% static 'images/train/dogclean.jpg' %}" alt="dog-clean">
               
               <hr class="divider" />
               <h5>Sentado</h5>
@@ -45,7 +47,7 @@
               
               <p>Muestra una pequeña golosina a tu perro cerca de su nariz (no le permitas cogerla de tu mano) y muévala lentamente hacia sus ojos para que suba la nariz. Su cuerpo debería ir en la posición de sentado naturalmente. Tan pronto como se sienta, dale a tu cachorro la golosina elogiándolo y al mismo tiempo indica la orden verbal 'sit'. Sigue practicando hasta que finalmente no consiga la golosina, con tu sereno elogio.</p>
 
-              <img src="../static/images/train/dogsit.jpg" alt="dog-sitting">
+              <img src="{% static 'images/train/dogsit.jpg' %}" alt="dog-sitting">
 
               <hr class="divider" />
               <h5>Abajo</h5>
@@ -53,7 +55,7 @@
               
               <p>Muestra una pequeña golosina a tu cachorro, muévala lentamente hacia el suelo y ponla entre las patas. Esto debe alentarlos a tumbarse para coger la golosina. Tan pronto como se tumbe, dale a tu cachorro la golosina elogiándolo y al mismo tiempo aplica la orden verbal mismo tiempo 'hacia abajo'. Una vez más, seguir practicando hasta que finalmente no consiga la golosina.</p>
 
-              <img src="../static/images/train/dogdown.jpg" alt="dog-down">
+              <img src="{% static 'images/train/dogdown.jpg' %}" alt="dog-down">
 
               <hr class="divider" />
               <h5>Quieto</h5>
@@ -61,7 +63,7 @@
               
               <p>Ordena al perro que se siente o eche. Luego dale la orden "Stay". Retrocede lentamente, levantando un dedo para advertirle que no se mueva. Si lo hace, dile "¡No!"" enérgicamente. Deja la correa sobre el suelo, desde él hacia ti, mientras te alejas retrocediendo. Sigue repitiendo "Stay" o "No", según su reacción. Con cada lección trata de retroceder un poco más hasta que quede un espacio libre entre ti y el extremo de la correa.</p>
 
-              <img src="../static/images/train/dogstay.jpg" alt="dog-staying">
+              <img src="{% static 'images/train/dogstay.jpg' %}" alt="dog-staying">
 
               <hr class="divider" />
               <h5>Da la pata</h5>
@@ -69,7 +71,7 @@
               
               <p>Con el perro en posición sentada, empújale su hombro derecho con tu mano izquierda. Cuando levante la pata delantera, toma su pata en tu mano derecha, estréchasela, y después prémialo. Sigue repitiéndole la orden "pata" cada vez que realices esta acción.</p>
 
-              <img src="../static/images/train/dogfeet.jpg" alt="dog-feet">
+              <img src="{% static 'images/train/dogfeet.jpg' %}" alt="dog-feet">
 
               
             </div>

@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
     <br>
     <br>
@@ -156,6 +158,6 @@
         </div>
       </article> -->
     </section>
-    <script src="../static/scripts/adopDogs.js"></script>
+    <script src="{% static 'scripts/adopDogs.js' %}"></script>
 {% endblock content %}
 

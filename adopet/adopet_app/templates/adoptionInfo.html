@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 
     <!-- Welcome to website -->
     <main>
       <div class="jumbotron jumbotron-fluid" id="banner">
-       <div class="parallax text-center text-white" style="background-image:url('../static/images/more.jpg');">
+       <div class="parallax text-center text-white" style="background-image:url('{% static 'images/more.jpg' %}');">
           
             <div class="container text-center" style="height:580px;padding-top:170px;">
               <h1 class="card-title pt-3 mb-5 font-bold"><strong>¿Quieres adoptar?</strong></h1>

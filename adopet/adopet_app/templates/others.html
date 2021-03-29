@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
     <br>
     <br>
@@ -17,6 +19,6 @@
 
 
   
-  <script src="../static/scripts/adopOthers.js"></script>
+  <script src="{% static 'scripts/adopOthers.js' %}"></script>
 
 {% endblock content %}
