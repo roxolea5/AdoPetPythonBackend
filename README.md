@@ -45,7 +45,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 ```
-Mofify urls.py on app folder to access corresponding views
+Modify urls.py on app folder to access corresponding views
 ```
  from django.urls import path
   from . import views
@@ -54,3 +54,52 @@ Mofify urls.py on app folder to access corresponding views
  path('', views.index, name="index"),
   ]
 ```
+Modify views.py on app folder to display something on index (index function)
+
+Create folder templates to add html files in there.
+
+Install mysql
+```
+pip install mysqlclient
+```
+
+Create docker image
+```
+docker create --name djangosql -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 mysql
+```
+
+Start image
+```
+docker start djangosql
+```
+If port is not available go to task manager and end task "mysqld"
+
+To see docker image execute
+```
+docker ps
+```
+Create pets.sql file to initialize db
+docker exec -i djangosql mysql -hlocalhost -uroot -p < adopet/sql/adopet_db.sql
+
+Confirm connection
+docker exec -it djangosql mysql -hlocalhost -upet -p adopet_django
+
+install mysql connector
+
+pip install mysql-connector-python
+
+pip install click
+
+python register_list.py
+
+TO create add_user.py file as example
+
+python add_user.py
+
+python add_user.py "sofy03" "Sofia" "Gonzalez" "sofy0303@gmail.com" "SofyGonzalez03" "1990-03-03" "sofyphoto" 1 3
+
+TO create update_user.py file as example}
+
+python update_user.py 6 None None Martinez None None None None None None
+
+

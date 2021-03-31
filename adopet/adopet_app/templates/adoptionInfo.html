@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- Welcome to website -->
+    <main>
+      <div class="jumbotron jumbotron-fluid" id="banner">
+       <div class="parallax text-center text-white" style="background-image:url('{% static 'images/more.jpg' %}');">
+          
+            <div class="container text-center" style="height:580px;padding-top:170px;">
+              <h1 class="card-title pt-3 mb-5 font-bold"><strong>¿Quieres adoptar?</strong></h1>
+            <h4 class="mx-5 mb-5">Aquí te decimos cómo &#129043;
+            </h4> 
+            </div>
+          
+      </div>
+      </div>
+    </main>
+
+    <!--Who we are?-->
+    <section class="landinginfo" id="adoptionlandinginfo">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="heading text-center">
+              <hr class="divider" />
+              <h2>Proceso de Adopción</h2>
+              <hr class="divider" />
+              <h6><mark>AdoPet</mark> surge de la necesidad de dar hogar a animalitos rescatados de la calle o del maltrato. Buscamos también hacer del proceso de adopción una experiencia agradable para adoptantes que quieren integrar a un nuevo miembro a su familia.</h6>
+              
+              <hr class="divider" />
+              <h5>Antes de adoptar</h5>
+              <hr class="divider" />
+              
+              <h6>Toma en cuenta lo siguiente si quieres una mascota en tu vida.</h6>
+              <ul  class= "row text-left">
+                <li><mark><strong> Disponibilidad:</strong></mark> Considera que todos los habitantes de la casa estén de acuerdo en recibir a un nuevo integrante,
+                  que tengas el espacio necesario y no menos importante, el <mark>tiempo</mark> que podrás dedicarle.
+                </li>
+                <li><mark><strong>Motivos:</strong></mark> Recuerda que una mascota como un perro o un gato pueden llegar a vivir hasta 18 años, por lo cual debe ser adoptada con <mark>responsabilidad</mark> y <mark>compromiso</mark>.</li>
+                <li><mark><strong>Presupuesto: </mark></strong> Toda mascota necesita atención médica, cuidados, vacunas, alimentación, entrenamiento y entretenimiento. El presupuesto económico es importante para su atención.</li>
+              </ul>
+              
+
+              <hr class="divider" />
+              <h5>Requisitos</h5>
+              <hr class="divider" />
+
+              
+              <h6>Para poder adoptar es necesario lo siguiente</h6>
+              <ul class= "list text-left">
+                <li>Ser mayor de edad.</li>
+                <li>Estar registrado en <mark>AdoPet</mark></li>
+                <li>Llenar la solictud de adopción.</li>
+                <li>Estar dispuesto a recibir una visita de verificación y visitas y llamadas de seguimiento.</li>
+                <li>Firmar una carta compromiso de cuidado de la mascota.</li>
+              </ul>
+              <p><mark><strong>NOTA: </strong></mark> Los rescatistas son independientes y por ello no contamos con un refugio. El rescatista dará en adopción luego de un proceso de vacunación, esterilización y desparasitación, de no ser así se especificará en la información del posible adoptado, así como si se solicita una cuota de recuperación por él.</p>
+              
+
+              <hr class="divider" />
+              <h5>¿Ya sabes a cuál adoptar?</h5>
+              <hr class="divider" />
+            
+              <ul class= "list row text-left">
+                <li>Luego de elegir y mandar tu solicitud el rescatista se pondrá en contacto para comunicarte cualquier otro detalle importante y resolver dudas.
+                </li>
+                <li>Tu nueva mascota será entregada en tu domicilio y tendrá un periodo de prueba de 15 días para la adaptación de tu familia a su nuevo integrante y del nuevo integrante a su nuevo hogar.</li>
+                <li>No olvides comprarle una plaquita.</li>
+              </ul>
+
+              <hr class="divider" />
+              <h5>¿Por qué son importantes esos requisitos?</h5>
+              <hr class="divider" />
+
+              <ul  class= "row text-left">
+                <li>En su mayoría los animalitos de <mark>AdoPet</mark> han sido rescatados de calle, abandono y maltrato. Deseamos que tengan una vida en familia con el amor y cuidado necesarios. 
+                </li>
+                <li>Compartir tu vida con un compañero animal puede traer compensaciones increí­bles, pero sólo si estás dispuesto a dedicarle el necesario tiempo, dinero, responsabilidad y amor por el resto de su vida.
+                </li>
+              </ul>
+              
+          
+
+              
+            </div>
+          </div>
+        </div>          
+      </div>
+    </section>
+    {% endblock content %}
+
+      

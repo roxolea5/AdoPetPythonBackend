@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <main>
+      <div class="jumbotron jumbotron-fluid" id="banner">
+       <div class="parallax text-center text-white" style="background-image:url('{% static 'images/cute.jpg' %}');">
+          
+            <div class="container text-center" style="height:580px;padding-top:170px;">
+              <h1 class="card-title pt-3 mb-5 font-bold"><strong>Consejos y Cuidados</strong></h1>
+             
+            </div>
+          
+      </div>
+      </div>
+    </main>
+
+    <!--Who we are?-->
+    <section class="landinginfo" id="adoptionlandinginfo">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="heading text-center">
+              <hr class="divider" />
+              <h2>Cuidados básico para mascotas</h2>
+              <hr class="divider" />
+              <h6>Cada mascota es distinta, pero debemos seguir una serie de cuidados básicos para que nuestra mascota tenga una vida plena y saludable</h6>
+
+              <hr class="divider" />
+              <h5>Protección</h5>
+              <hr class="divider" />
+              
+              <p>Dale un lugar seguro donde resguardarse del frio y calor.</p>
+
+              <img src="{% static 'images/care/house.jpg' %}" alt="dog-house">
+
+              <hr class="divider" />
+              <h5>Alimentación</h5>
+              <hr class="divider" />
+              
+              <p>Los avances en este campo son increíbles, puedes encontrar un producto muy especializado en las características de tu animal. Los de perro y gato están clasificados en húmedos o secos, según el tipo de pelo, según la edad del animal, específicos para una enfermedad, para hacer dieta, si está esterilizado o no, etc.</p>
+
+              <img src="{% static 'images/care/food.jpg' %}" alt="cat-eating">
+
+              <hr class="divider" />
+              <h5>Limpieza</h5>
+              <hr class="divider" />
+              
+              <p>Debes mantenerlo limpio, libre de pulgas y garrapatas. Debes bañar a tu perro cada 15 días con jabón especial y a los gatos es necesario cepillarlos para quitarles el polvo y pelo suelto. Mantén también limpia el área donde habita.</p>
+
+              <img src="{% static 'images/care/shower.jpg' %}" alt="dog-wet">
+
+              <hr class="divider" />
+              <h5>Salud</h5>
+              <hr class="divider" />
+              
+              <p>Lleva a tu perro o gato al médico cuando observes que no actúa normal. Mantén su cuadro de vacunación y desparasitación siempre al corriente.</p>
+
+              <p>No le des remedios caseros ni medicina de humanos.</p>
+
+              <img src="{% static 'images/care/vet.jpg' %}" alt="dog-vet">
+
+              <hr class="divider" />
+              <h5>Esterilización</h5>
+              <hr class="divider" />
+              
+              <p>Como sociedad, tenemos la responsabilidad de que los animales de compañía tengan una posibilidad real de encontrar un hogar con personas responsables, capaces de brindarles una vida digna; precisamente por esta razón debemos evitar el nacimiento de aquellos no deseados, que de lo contrario terminarán por ser sacrificados, maltratados o abandonados. Lleva a tu mascota a esterilizar.</p>
+
+              <img src="{% static 'images/care/sterilize.jpg' %}" alt="dog-sterilize">
+
+              <hr class="divider" />
+              <h5>Ejercicio</h5>
+              <hr class="divider" />
+              
+              <p>Los perros y gatos necesitan ejercicio esto ayuda a gastar energía y hacer menos destrozos. Lleva tu perro a pasear con correa diariamente. No olvides recoger su popó con una bolsita y tirarla a la basura para evitar contaminación.</p>
+
+              <img src="{% static 'images/care/exercise.jpg' %}" alt="cat-exercise">
+
+              <hr class="divider" />
+              <h5>Entrenamiento</h5>
+              <hr class="divider" />
+              
+              <p>Los perros y gatos pueden aprender si los educamos con amor, constancia y paciencia.</p>
+
+              <p>NO con gritos ni golpes. Las acciones premiadas las repiten: Dales un premio o palabras amables cuando hagan algo bueno. Dales un juguete adecuado para que se  mantengan ocupados cuando estén solos.</p>
+
+              <img src="{% static 'images/care/training.jpg' %}" alt="dog-in-training">
+
+              <hr class="divider" />
+              <h5>Identificación</h5>
+              <hr class="divider" />
+              
+              <p>Toda mascota debe portar una placa de identificación con su nombre y teléfono de su dueño, esta simple acción puede salvar su vida.</p>
+
+              <img src="{% static 'images/care/id.jpg' %}" alt="dog-id">              
+            </div>
+          </div>
+        </div>          
+      </div>
+    </section>
+
+{% endblock content %}
