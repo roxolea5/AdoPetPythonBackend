@@ -40,3 +40,29 @@ def about_us(request):
 
 def directory(request):
     return render(request, "directory.html")
+
+def login(request):
+    """ GET /login/ """
+
+    valid_user = ("roxana05", "roxana05")  # (username, password)
+
+    # Process POST data
+    if request.method == "POST":
+        # Getting data from form
+        form_user = (request.POST["username"],
+            request.POST["password"])
+        if form_user == valid_user:
+            # If valid user, we return to index
+            msg = "Datos correctos, bienvenido!"
+        else:
+            # Usuario malo
+            msg = "Datos incorrectos, intente de nuevo!"
+    else:
+        # Si no hay datos POST
+        msg = ""
+
+    return render(request, "login.html",
+        {
+            "msg":msg,
+        }
+    )
