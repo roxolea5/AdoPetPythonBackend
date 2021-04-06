@@ -2,18 +2,26 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from .models import Pet
+
 # Create your views here.
 def index(request):
     return render(request, "index.html")
 
 def adop_dogs(request):
-    return render(request, "dogs.html")
+    dogs=Pet.objects.filter(category="Perro")
+
+    return render(request, "dogs.html", {"dogs":dogs})
 
 def adop_cats(request):
-    return render(request, "cats.html")
+    cats=Pet.objects.filter(category="Gato")
+
+    return render(request, "cats.html", {"cats":cats})
 
 def adop_others(request):
-    return render(request, "others.html")
+    others=Pet.objects.filter(category="Otro")
+
+    return render(request, "others.html", {"others":others})
 
 def adoption_info(request):
     return render(request, "adoptionInfo.html")

@@ -103,3 +103,29 @@ TO create update_user.py file as example}
 python update_user.py 6 None None Martinez None None None None None None
 
 
+Now create entities with django models
+
+then apply migrations
+
+python manage.py makemigrations
+python manage.py migrate
+
+To use default django CRUD super user is necessary
+
+python manage.py createsuperuser (roxana05)
+
+login on http://localhost:8000/admin
+
+To see our model on admin modify admin.py and import there
+
+Pillow dependencie is necessary to use ImageField
+
+pip install Pillow
+
+import os -> settings.py
+
+Generate MEDIA_URL
+
+import on urls.py
+
+
