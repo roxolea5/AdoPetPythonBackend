@@ -21,7 +21,7 @@ def adop_cats(request):
 def adop_others(request):
     others=Pet.objects.filter(category="Otro")
 
-    return render(request, "others.html")
+    return render(request, "others.html", {"others":others})
 
 def adoption_info(request):
     return render(request, "adoptionInfo.html")
