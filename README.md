@@ -79,7 +79,7 @@ To see docker image execute
 docker ps
 ```
 Create pets.sql file to initialize db
-docker exec -i djangosql mysql -hlocalhost -uroot -p < adopet/sql/adopet_db.sql
+docker exec -i djangosql mysql -hlocalhost -upet -p < adopet/sql/adopet_db.sql
 
 Confirm connection
 docker exec -it djangosql mysql -hlocalhost -upet -p adopet_django
@@ -127,5 +127,9 @@ import os -> settings.py
 Generate MEDIA_URL
 
 import on urls.py
+
+python manage.py makemigrations --dry-run --verbosity 3
+
+based on https://testdriven.io/blog/django-custom-user-model/
 
 

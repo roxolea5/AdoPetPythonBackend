@@ -1,38 +1,36 @@
 from django.db import models
 
+from django.contrib.auth.models import AbstractBaseUser
+from django.contrib.auth.models import PermissionsMixin
+from django.utils.translation import gettext_lazy as _
+from django.utils import timezone
+
+from .managers import CustomUserManager
 # Create your models here.
-class Role(models.Model):
-    class Status(models.IntegerChoices):
-        ACTIVE = 1
-        INACTIVE = 0
 
-    role = models.CharField(max_length=50, null=False, unique=True)
-    description = models.CharField(max_length=100, null=False)
-    status = models.IntegerField(null=False, choices=Status.choices)
-
-    def __str__(self):
-      """ Se define la representación en str para Role """
-      return f"{self.id} {self.role} {self.description} {self.status}" 
-
-class User(models.Model):
-
-    username = models.CharField(max_length=30, null=False, unique=True)
+class User(AbstractBaseUser, PermissionsMixin):
+    name_of_user = models.CharField(max_length=30, null=False)
     first_name = models.CharField(max_length=255, null=False)
     last_name = models.CharField(max_length=255, null=False)
-    email = models.EmailField(unique=True)
-    password = models.CharField(max_length=255, null=False)
-    date_of_birth = models.DateField()
-    photo = models.CharField(max_length=255, null=True, blank=True)
-    
-    STATUS_CHOICES = [
-    ('ACTIVE', 'Active'),
-    ('INACTIVE', 'Inactive'),
-    ('PENDING', 'Pending'),
-    ]
+    email = models.EmailField(_('email address'),unique=True)
+    date_of_birth = models.DateTimeField(default=timezone.now)
+    photo = models.ImageField(null=True, upload_to='users')
 
-    status = models.CharField(max_length=10, null=False, choices=STATUS_CHOICES)
-    role_id = models.ForeignKey(Role, on_delete=models.CASCADE, null=True,
-        blank=True, related_name="user_role")
+    is_staff = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+    date_joined = models.DateTimeField(default=timezone.now)
+
+    is_adoptant = models.BooleanField(default=False)
+    is_rescuer = models.BooleanField(default=False)
+    
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+
+    objects = CustomUserManager()
+
+    def __str__(self):
+        return self.email
+
 
 class Pet(models.Model):
     name = models.CharField(max_length=30, null=False)
@@ -80,7 +78,7 @@ class Pet(models.Model):
     status = models.CharField(max_length=10, null=False, choices=STATUS_CHOICES)
     user_rescuer_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True,
         blank=True, related_name="rescuer_user")
-    user_adoptant_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True,
+    user_adoptant_id = models.ForeignKey(User, on_delete=models.SET_NULL, null=True,
         blank=True, related_name="adoptant_user")
 
 class Questionary(models.Model):
@@ -108,7 +106,7 @@ class Questionary(models.Model):
 
 class Request(models.Model):
     pet_id = models.ForeignKey(Pet, null=True, on_delete=models.SET_NULL, related_name="requested_pet")
-    applicant_user_id = models.ForeignKey(User, null=True, on_delete=models.SET_NULL, related_name="requester_user")
+    applicant_user_id = models.ForeignKey(User, null=True, on_delete=models.CASCADE, related_name="requester_user")
     approver_user_id = models.ForeignKey(User, null=True, on_delete=models.SET_NULL, related_name="approver_user")
     STATUS_CHOICES = [
     ('OPEN', 'Open'),

@@ -1,14 +1,29 @@
 from django.contrib import admin
-from .models import Role, User, Pet, Questionary, Request
+
+from django.contrib.auth.admin import UserAdmin
+
+from .forms import CustomUserCreationForm, CustomUserChangeForm
+from .models import User, Pet, Questionary, Request
 
 # Personalizing models on admin
-class RoleAdmin(admin.ModelAdmin):
-    # Override __str__ method
-    list_display = ("id", "role", "description", "status")
-
-class UserAdmin(admin.ModelAdmin):
-    # Override __str__ method
-    list_display = ("id", "username", "first_name", "last_name", "status", "role_id")
+class CustomUserAdmin(UserAdmin):
+    add_form = CustomUserCreationForm
+    form = CustomUserChangeForm
+    model = User
+    list_display = ('id', 'email', 'name_of_user', 'first_name', 'last_name', 'date_of_birth', 'is_adoptant', 'is_rescuer', 'is_staff', 'is_active',)
+    list_filter = ('email', 'is_rescuer', 'is_adoptant','is_staff', 'is_active',)
+    fieldsets = (
+        (None, {'fields': ('email', 'password')}),
+        ('Permissions', {'fields': ('is_adoptant', 'is_rescuer','is_staff', 'is_active')}),
+    )
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('email', 'password1', 'password2','name_of_user', 'first_name', 'last_name', 'date_of_birth', 'is_adoptant', 'is_rescuer', 'is_staff', 'is_active')}
+        ),
+    )
+    search_fields = ('email',)
+    ordering = ('email',)
 
 class PetAdmin(admin.ModelAdmin):
     # Override __str__ method
@@ -25,8 +40,7 @@ class RequestAdmin(admin.ModelAdmin):
 # Register your models here.
 
 # Register your models here.
-admin.site.register(Role, RoleAdmin)
-admin.site.register(User, UserAdmin)
+admin.site.register(User, CustomUserAdmin)
 admin.site.register(Pet, PetAdmin)
 admin.site.register(Questionary, QuestionaryAdmin)
 admin.site.register(Request, RequestAdmin)
