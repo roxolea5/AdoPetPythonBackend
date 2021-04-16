@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from django.contrib.auth.admin import UserAdmin
 
-from .forms import CustomUserCreationForm, CustomUserChangeForm
+from .forms import CustomUserCreationForm, CustomUserChangeForm, AdoptantSignUpForm, RescuerSignUpForm
 from .models import User, Pet, Questionary, Request
 
 # Personalizing models on admin
@@ -37,7 +37,6 @@ class RequestAdmin(admin.ModelAdmin):
     # Override __str__ method
     list_display = ("id", "pet_id", "applicant_user_id", "approver_user_id", "status")
 
-# Register your models here.
 
 # Register your models here.
 admin.site.register(User, CustomUserAdmin)

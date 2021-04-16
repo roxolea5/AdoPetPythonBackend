@@ -17,6 +17,11 @@ body {
   display: block;
 }
 
+.navbar .from-inline a{
+  color: white !important;
+}
+
+
 main {
   height: 100%;
   padding-top: 80px;
