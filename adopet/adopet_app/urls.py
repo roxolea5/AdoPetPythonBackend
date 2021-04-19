@@ -4,6 +4,7 @@ from .views import adopet_app
 
 urlpatterns = [
  path('', adopet_app.index, name="index"),
+ #path('signup', adopet_app.signup, name="signup"),
  path('dogs/', adopet_app.adop_dogs, name="adop_dogs"),
  path('cats/', adopet_app.adop_cats, name="adop_cats"),
  path('others/', adopet_app.adop_others, name="adop_others"),

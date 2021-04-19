@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- Welcome to website -->
+    <main>
+      <div class="jumbotron jumbotron-fluid" id="banner">
+       <div class="parallax text-center text-white" style="background-image:url('{% static 'images/pet-main.jpg' %}');">
+          
+            <div class="container text-center" style="height:580px;padding-top:170px;">
+              <h1 class="card-title pt-3 mb-5 font-bold"><strong>BIENVENID@S</strong></h1>
+            <h4 class="mx-5 mb-5">En AdoPet nos preocupamos por el bienestar de los animalitos rescatados. Buscamos crear una experiencia agradable para aquellos que ponen el corazón rescatando o que buscan más que una máscota, adoptar un amigo.
+            </h4> 
+            </div>
+          
+      </div>
+      </div>
+    </main>
+
+    <!--Who we are?-->
+    <section class="aboutus" id="aboutus">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="heading text-center">
+              <hr class="divider" />
+              <h2>AdoPet</h2>
+              <hr class="divider" />
+              <h4><mark>AdoPet</mark> surge de la necesidad de dar hogar a animalitos rescatados de la calle o del maltrato. Buscamos también hacer del proceso de adopción una experiencia agradable para adoptantes que quieren integrar a un nuevo miembro a su familia.</h4>
+            </div>
+          </div>
+        </div>
+          <div class="row justify-content-center">
+            <div class="col-md-3">
+              <div class="card text-center">
+                <a href="{% url 'adop_dogs' %}">
+                  <img class="card-img-top" src="{% static 'images/main/dog.jpg' %}" alt="To dogs section">
+                </a>                
+                <div class="card-block">
+                  <h4 class="card-title">Perros</h4>
+                  <a href="/dogs" class="btn btn-link">Adopta</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card text-center">
+                <a href="{% url 'adop_cats' %}">
+                  <img class="card-img-top" src="{% static 'images/main/cat.jpg' %}" alt="To cats section">
+                </a>
+                <div class="card-block">
+                  <h4 class="card-title">Gatos</h4>
+                  <a href="#" class="btn btn-link">Adopta</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card text-center">
+                <a href="{% url 'adop_others' %}">
+                  <img class="card-img-top" src="{% static 'images/main/other.jpg' %}" alt="To others section">
+                </a>
+                <div class="card-block">
+                  <h4 class="card-title">Otros</h4>
+                  <a href="#" class="btn btn-link">Adopta</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>      
+
+{% endblock content %}
