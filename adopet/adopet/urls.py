@@ -23,11 +23,10 @@ from django.views.generic.base import TemplateView
 from adopet_app.views import adopet_app
 
 urlpatterns = [
-    #path('', TemplateView.as_view(template_name='index.html'), name='index'),
     path('', include('adopet_app.urls')),
-    #path('accounts/', include('adopet_app.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/signup/', adopet_app.signup, name='signup'),
+    path('accounts/', include('adopet_app.urls')),
+    #path('accounts/', include('django.contrib.auth.urls')),
+    path('signup/', adopet_app.signup, name='signup'),
 
     path('admin/', admin.site.urls),
     

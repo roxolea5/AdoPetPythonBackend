@@ -1,3 +1,9 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Open Sans", sans-serif;
+}
+
 body {
   background-color: #fffbf7;
 }
@@ -16,11 +22,9 @@ body {
 .navbar .nav-item:hover .dropdown-menu {
   display: block;
 }
-
-.navbar .from-inline a{
+.navbar .from-inline a {
   color: white !important;
 }
-
 
 main {
   height: 100%;
@@ -186,7 +190,7 @@ main img {
   text-transform: uppercase;
 }
 .footer a, .footer a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .pets-and-info {
@@ -235,4 +239,32 @@ main img {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=adoPet.css.map */
+.register {
+  text-align: center;
+}
+.register h1 {
+  font-weight: bold;
+  color: purple;
+}
+.register .btn-adoptant {
+  color: #ffffff;
+  background-color: #91afb6;
+  border-color: #91afb6;
+}
+.register .btn-adoptant:hover, .register .btn-adoptant:active {
+  color: #ffffff;
+  background-color: #608993;
+  border-color: #608993;
+}
+.register .btn-rescuer {
+  color: #ffffff;
+  background-color: #8980a5;
+  border-color: #8980a5;
+}
+.register .btn-rescuer:hover, .register .btn-rescuer:active {
+  color: #ffffff;
+  background-color: #66598B;
+  border-color: #66598B;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -13,7 +13,9 @@ from django.views.generic import TemplateView
 
 
 def signup(request):
-    return HttpResponse('<h1>Si existo</h1>')
+    context = {}
+    
+    return render(request, 'registration/signup.html', context)
 
 class AdoptantSignUpView(CreateView):
     model = User
