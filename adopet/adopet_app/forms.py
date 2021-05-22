@@ -32,7 +32,7 @@ class RescuerSignUpForm(UserCreationForm):
 
 class AdoptantSignUpForm(UserCreationForm):
 
-    class Meta():
+    class Meta(UserCreationForm.Meta):
         model = User
         fields = ('email', )
         

@@ -132,4 +132,8 @@ python manage.py makemigrations --dry-run --verbosity 3
 
 based on https://testdriven.io/blog/django-custom-user-model/
 
+pip install django-crispy-forms
+
+add crispy_forms to INSTALLED_APPS on settings.py file
+
 

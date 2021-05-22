@@ -20,13 +20,14 @@ from django.conf.urls.static import static
 
 from django.views.generic.base import TemplateView
 
-from adopet_app.views import adopet_app
+from adopet_app.views import adopet_app, adoptant, rescuer
 
 urlpatterns = [
     path('', include('adopet_app.urls')),
     path('accounts/', include('adopet_app.urls')),
     #path('accounts/', include('django.contrib.auth.urls')),
     path('signup/', adopet_app.signup, name='signup'),
+    path('signup/adoptant', adoptant.AdoptantSignUpView.as_view(), name='adoptant_signup'),
 
     path('admin/', admin.site.urls),
     
